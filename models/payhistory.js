@@ -23,7 +23,19 @@ const { historyRouter } = require('./controllers/payHistory.js')
 /* Create model Schema */
 
 const History = new mongoose.Schema({
-    Address: {
+    address: {
+        type: String,
+        required: true,
+    },
+    city: {
+        type: String,
+        required: true,
+    },
+    state: {
+        type: String,
+        required: true,
+    },
+    zipCode: {
         type: String,
         required: true,
     },
