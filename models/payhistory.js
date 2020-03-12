@@ -19,6 +19,35 @@ const app = express()
 const { historyRouter } = require('./controllers/payHistory.js')
 
 
+
+/* Create model Schema */
+
+const History = new mongoose.Schema({
+    Address: {
+        type: String,
+        required: true,
+    },
+    firstName: {
+      type: String,
+      required: true,
+    },
+    lastName: {
+      type: String,
+      required: true,
+    },
+    amountPaid: {
+        type: String,
+        required: true,
+    },
+    date: {
+        type: String,
+        required: true,
+    },
+    
+})
+
+
+
 /* Step 3
  *
  * Register middleware...

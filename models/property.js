@@ -18,6 +18,32 @@ const app = express()
  */
 const { propertyRouter } = require('./controllers/Property.js')
 
+/* Create model Schema */
+
+const Property = new mongoose.Schema({
+    Address: {
+        type: String,
+        required: true,
+    },
+    firstName: {
+      type: String,
+      required: true,
+    },
+    lastName: {
+      type: String,
+      required: true,
+    },
+    phoneNum: {
+        type: String,
+        required: true,
+    },
+    email: {
+        type: String,
+        required: true,
+    },
+    
+})
+
 
 /* Step 3
  *

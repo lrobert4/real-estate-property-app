@@ -18,6 +18,28 @@ const app = express()
  */
 const { expenseRouter } = require('./controllers/Expenses.js')
 
+/* Create model Schema */
+
+const Expenses = new mongoose.Schema({
+    propertyTax: {
+        type: String,
+        required: true,
+    },
+    landscapingFee: {
+      type: String,
+      required: true,
+    },
+    insurance: {
+      type: String,
+      required: true,
+    },
+    mortgage: {
+        type: String,
+        required: true,
+    },
+    
+})
+
 
 /* Step 3
  *

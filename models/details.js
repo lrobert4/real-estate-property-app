@@ -19,6 +19,41 @@ const app = express()
 const { detailsRouter } = require('./controllers/Details.js')
 
 
+/* Create model Schema */
+
+const Details = new mongoose.Schema({
+    yearBuilt: {
+        type: String,
+        required: true,
+    },
+    currentRent: {
+      type: String,
+      required: true,
+    },
+    rentDueDate: {
+        type: String,
+        required: true,
+    },
+    lastKitchenUpgrade: {
+      type: String,
+      required: true,
+    },
+    lastBathroomUpgrade: {
+        type: String,
+        required: true,
+    },
+    lastRoofUpgrade: {
+        type: String,
+        required: true,
+    },
+    notes: {
+        type: String,
+        required: true,
+    },
+    
+})
+
+
 /* Step 3
  *
  * Register middleware...
