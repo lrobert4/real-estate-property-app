@@ -51,7 +51,7 @@ historyRouter.get('/', (req, res) => {
 
 // retrieve a single property from the DB
 historyRouter.get('/:historyId', (req, res) => {
-    History.findById(req.params.id).then(history => {
+    History.findById(req.params.historyId).then(history => {
         res.json( history );
        
     });

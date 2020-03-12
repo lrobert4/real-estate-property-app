@@ -15,7 +15,7 @@ const express = require('express')
  * controller you need.
  * 
  */
-const detailsModel = require('../models/details.js')
+const Details = require('../models/details.js')
 
 /* Step 3 
  * 
@@ -42,7 +42,7 @@ detailsRouter.get('/', (req, res) => {
 
  // retrieve all property from the DB
  detailsRouter.get('/', (req, res) => {
-    Detail.find().then(details => {
+    Details.find().then(details => {
         res.json( details );
        
     });
@@ -51,7 +51,7 @@ detailsRouter.get('/', (req, res) => {
 
 // retrieve a single property from the DB
 detailsRouter.get('/:detailsId', (req, res) => {
-    Detail.findById(req.params.id).then(detail => {
+    Details.findById(req.params.detailsId).then(detail => {
         res.json( detail );
        
     });
@@ -59,7 +59,7 @@ detailsRouter.get('/:detailsId', (req, res) => {
 
 // add newCreature to DB
 detailsRouter.post('/', (req, res) => {
-    Detail.create(req.body).then(() => {
+    Details.create(req.body).then(() => {
         res.status(200).end()
     });
 });
@@ -67,7 +67,7 @@ detailsRouter.post('/', (req, res) => {
 
 // update creature with creatureId to updatedCreature
 detailsRouter.put('/:detailsId', (req, res) => {
-    Detail.findByIdAndUpdate(req.params.detailsId, req. body).then(detail => {
+    Details.findByIdAndUpdate(req.params.detailsId, req. body).then(detail => {
         res.status(200).end()
     });
 });
@@ -75,7 +75,7 @@ detailsRouter.put('/:detailsId', (req, res) => {
 
 // deletes creature with creatureId from DB
 detailsRouter.delete('/:detailsId', (req, res) => {
-    Detail.findByIdAndDelete(req.params.detailsId).then(() => {
+    Details.findByIdAndDelete(req.params.detailsId).then(() => {
         res.status(200).end()
     });
 });

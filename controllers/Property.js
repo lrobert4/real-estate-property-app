@@ -52,7 +52,7 @@ propertyRouter.get('/', (req, res) => {
 
 // retrieve a single property from the DB
 propertyRouter.get('/:propertyId', (req, res) => {
-    Property.findById(req.params.id).then(property => {
+    Property.findById(req.params.propertyId).then(property => {
         res.json( property );
        
     });
@@ -68,7 +68,7 @@ propertyRouter.post('/', (req, res) => {
 
 // update creature with creatureId to updatedCreature
 propertyRouter.put('/:propertyId', (req, res) => {
-    Property.findByIdAndUpdate(req.params.propertyId, req. body).then(property => {
+    Property.findByIdAndUpdate(req.params.propertyId, req.body).then(property => {
         res.status(200).end()
     });
 });

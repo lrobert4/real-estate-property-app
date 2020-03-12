@@ -15,7 +15,7 @@ const express = require('express')
  * controller you need.
  * 
  */
-const expenseModel = require('../models/expenses.js')
+const Expense = require('../models/expenses.js')
 
 /* Step 3 
  * 
@@ -51,7 +51,7 @@ expenseRouter.get('/', (req, res) => {
 
 // retrieve a single expense from the DB
 expenseRouter.get('/:expenseId', (req, res) => {
-    Expense.findById(req.params.id).then(expense => {
+    Expense.findById(req.params.expenseId).then(expense => {
         res.json( expense );
        
     });
