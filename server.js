@@ -16,7 +16,10 @@ const app = express()
  * import routers from controllers/
  *
  */
-const { templateRouter } = require('./controllers/template.js')
+const { historyRouter } = require('./controllers/payHistory.js')
+const { detailsRouter } = require('./controllers/Details.js')
+const { propertyRouter } = require('./controllers/Property.js') 
+const { expenseRouter } = require('./controllers/Expenses.js')
 
 
 /* Step 3
@@ -51,7 +54,7 @@ app.use(express.static(`${__dirname}/client/build`))
  */
 
 
-app.use('/api/payhistory', historysRouter)
+app.use('/api/payhistory', historyRouter)
 app.use('/property', propertyRouter)
 app.use('/details', detailsRouter)
 app.use('/expenses', expenseRouter)

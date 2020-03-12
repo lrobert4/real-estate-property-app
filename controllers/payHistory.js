@@ -15,7 +15,7 @@ const express = require('express')
  * controller you need.
  * 
  */
-const propertyModel = require('../models/property.js')
+const historyModel = require('../models/payHistory.js')
 
 /* Step 3 
  * 
@@ -31,6 +31,13 @@ const historyRouter = express.Router()
  * 
  * TODO: Put all request handlers here
  */
+
+ /* 
+ * TODO: delete this handler; it's just a sample
+ */ 
+historyRouter.get('/', (req, res) => {
+    res.json('hello history world')
+  })
 
 
  // retrieve all property from the DB
@@ -75,13 +82,7 @@ historyRouter.delete('/:historyId', (req, res) => {
 
 
 
-/* Step 5
- *
- * TODO: delete this handler; it's just a sample
- */ 
-historyRouter.get('/', (req, res) => {
-  res.json('hello history world')
-})
+
 
 /* Step 6
  *
