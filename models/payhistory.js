@@ -52,7 +52,7 @@ const History = new mongoose.Schema({
         type: String,
         required: true,
     },
-    date: {
+    datePaid: {
         type: String,
         required: true,
     },

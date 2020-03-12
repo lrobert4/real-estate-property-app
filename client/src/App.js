@@ -11,8 +11,8 @@ function App() {
       <Router>
         <Switch>
           
-          <Route exact path="/" component={Details}/>
           <Route exact path="/" component={PayHistory}/>
+          <Route exact path="/" component={Details}/>
           <Route exact path="/" component={Expenses}/>
           
         </Switch>
