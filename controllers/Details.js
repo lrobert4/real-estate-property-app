@@ -32,6 +32,13 @@ const detailsRouter = express.Router()
  * TODO: Put all request handlers here
  */
 
+ /* 
+ * TODO: delete this handler; it's just a sample
+ */ 
+detailsRouter.get('/', (req, res) => {
+    res.json('hello details world')
+  })
+
 
  // retrieve all property from the DB
  detailsRouter.get('/', (req, res) => {
@@ -73,15 +80,6 @@ detailsRouter.delete('/:detailsId', (req, res) => {
     });
 });
 
-
-
-/* Step 5
- *
- * TODO: delete this handler; it's just a sample
- */ 
-detailsRouter.get('/', (req, res) => {
-  res.json('hello property world')
-})
 
 /* Step 6
  *

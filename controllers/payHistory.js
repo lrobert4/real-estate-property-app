@@ -29,16 +29,16 @@ const historyRouter = express.Router()
 
 /* Step 4
  * 
- * TODO: Put all request handlers here
+ * All request handlers here
  */
 
  /* 
- * TODO: delete this handler; it's just a sample
- */ 
+ * Testing Purposes on localhost:3001/<path_name>
+  
 historyRouter.get('/', (req, res) => {
     res.json('hello history world')
   })
-
+*/
 
  // retrieve all property from the DB
  historyRouter.get('/', (req, res) => {

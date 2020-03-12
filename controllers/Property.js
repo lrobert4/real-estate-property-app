@@ -32,6 +32,13 @@ const propertyRouter = express.Router()
  * TODO: Put all request handlers here
  */
 
+ /* 
+ * TODO: delete this handler; it's just a sample
+ */ 
+propertyRouter.get('/', (req, res) => {
+    res.json('hello property world')
+  })
+
 
  // retrieve all property from the DB
  propertyRouter.get('/', (req, res) => {
@@ -73,15 +80,6 @@ propertyRouter.delete('/:propertyId', (req, res) => {
     });
 });
 
-
-
-/* Step 5
- *
- * TODO: delete this handler; it's just a sample
- */ 
-propertyRouter.get('/', (req, res) => {
-  res.json('hello property world')
-})
 
 /* Step 6
  *

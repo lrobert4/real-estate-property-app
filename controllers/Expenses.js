@@ -32,6 +32,13 @@ const expenseRouter = express.Router()
  * TODO: Put all request handlers here
  */
 
+ /* 
+ * TODO: delete this handler; it's just a sample
+ */ 
+expenseRouter.get('/', (req, res) => {
+    res.json('hello expenses world')
+  })
+
 
  // retrieve all expense from the DB
  expenseRouter.get('/', (req, res) => {
@@ -73,15 +80,6 @@ expenseRouter.delete('/:expenseId', (req, res) => {
     });
 });
 
-
-
-/* Step 5
- *
- * TODO: delete this handler; it's just a sample
- */ 
-expenseRouter.get('/', (req, res) => {
-  res.json('hello expense world')
-})
 
 /* Step 6
  *

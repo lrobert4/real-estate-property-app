@@ -54,7 +54,7 @@ app.use(express.static(`${__dirname}/client/build`))
  */
 
 
-app.use('/api/payhistory', historyRouter)
+app.use('/payhistory', historyRouter)
 app.use('/property', propertyRouter)
 app.use('/details', detailsRouter)
 app.use('/expenses', expenseRouter)

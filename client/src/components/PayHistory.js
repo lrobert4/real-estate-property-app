@@ -15,7 +15,7 @@ export default class PayHistory extends Component {
     *
     */
     state = {
-        message: ''
+        message: 'Testing Testing 123!'
     }
 
     /* Step 4
