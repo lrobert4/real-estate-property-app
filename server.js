@@ -50,8 +50,9 @@ app.use(express.static(`${__dirname}/client/build`))
  * the paths defined in the router.
  */
 
-app.use('/properties', propertyRouter)
+
 app.use('/api/payhistory', historysRouter)
+app.use('/property', propertyRouter)
 app.use('/details', detailsRouter)
 app.use('/expenses', expenseRouter)
 /*app.use('/', (req, res) => {
