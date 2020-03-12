@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import HelloWorld from './components/HelloWorld.js'
-import PayHistory from './components/PayHistory.js'
+import Property from './components/Property.js'
 import './App.css';
 
 function App() {
@@ -9,7 +8,8 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-          <Route exact path="/" component={PayHistory}/>
+          <Route exact path="/" component={Property}/>
+          
         </Switch>
       </Router>
     </div>

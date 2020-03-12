@@ -15,7 +15,7 @@ const express = require('express')
  * controller you need.
  * 
  */
-const propertyModel = require('../models/property.js')
+const Property = require('../models/property.js')
 
 /* Step 3 
  * 
@@ -35,10 +35,11 @@ const propertyRouter = express.Router()
  /* 
  * Testing Purposes on localhost:3001/<path_name>
 
+
 propertyRouter.get('/', (req, res) => {
     res.json('hello property world')
   })
- */ 
+  */
 
  // retrieve all property from the DB
  propertyRouter.get('/', (req, res) => {

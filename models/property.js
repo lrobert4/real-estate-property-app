@@ -16,9 +16,22 @@ const mongoose = require('./connection.js')
  *
  */
 const Property = new mongoose.Schema({
-    Address: {
+  
+    address: {
         type: String,
         required: true,
+    },
+    city: {
+      type: String,
+      required: true,
+    },
+    state: {
+      type: String,
+      required: true,
+    },
+    zipCode: {
+      type: String,
+      required: true,
     },
     firstName: {
       type: String,
