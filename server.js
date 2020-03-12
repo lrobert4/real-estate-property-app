@@ -49,8 +49,9 @@ app.use(express.static(`${__dirname}/client/build`))
  * add router for the application to use. The first argument is a prefix to all
  * the paths defined in the router.
  */
+
 app.use('/properties', propertyRouter)
-app.use('/payhistory', historysRouter)
+app.use('/api/payhistory', historysRouter)
 app.use('/details', detailsRouter)
 app.use('/expenses', expenseRouter)
 /*app.use('/', (req, res) => {
