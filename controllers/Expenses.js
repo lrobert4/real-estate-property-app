@@ -33,12 +33,12 @@ const expenseRouter = express.Router()
  */
 
  /* 
- * TODO: delete this handler; it's just a sample
- */ 
+ * Testing Purposes on localhost:3001/<path_name>
+  
 expenseRouter.get('/', (req, res) => {
     res.json('hello expenses world')
   })
-
+*/
 
  // retrieve all expense from the DB
  expenseRouter.get('/', (req, res) => {

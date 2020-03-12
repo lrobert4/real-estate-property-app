@@ -38,3 +38,5 @@ History.deleteMany().then(() => {
 }).then(() => {
     console.log('Database seeded.');
 });
+
+

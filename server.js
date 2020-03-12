@@ -58,9 +58,7 @@ app.use('/payhistory', historyRouter)
 app.use('/property', propertyRouter)
 app.use('/details', detailsRouter)
 app.use('/expenses', expenseRouter)
-/*app.use('/', (req, res) => {
-    res.render('body.hbs');
-})*/
+
 
 /* Step 5
  *

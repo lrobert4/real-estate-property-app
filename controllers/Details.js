@@ -33,12 +33,12 @@ const detailsRouter = express.Router()
  */
 
  /* 
- * TODO: delete this handler; it's just a sample
- */ 
+ * Testing Purposes on localhost:3001/<path_name>
+ 
 detailsRouter.get('/', (req, res) => {
     res.json('hello details world')
   })
-
+ */
 
  // retrieve all property from the DB
  detailsRouter.get('/', (req, res) => {
