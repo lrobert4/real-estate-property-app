@@ -16,7 +16,7 @@ const app = express()
  * import routers from controllers/
  *
  */
-const { templateRouter } = require('./controllers/template.js')
+const { propertyRouter } = require('./controllers/Property.js')
 
 
 /* Step 3
@@ -48,14 +48,9 @@ app.use(express.static(`${__dirname}/client/build`))
  *
  * add router for the application to use. The first argument is a prefix to all
  * the paths defined in the router.
- */
-app.use('/properties', propertyRouter)
-app.use('/payhistory', historysRouter)
-app.use('/details', detailsRouter)
-app.use('/expenses', expenseRouter)
-/*app.use('/', (req, res) => {
-    res.render('body.hbs');
-})*/
+ 
+app.use('/api/real-property-solutions', propertyRouter)
+*/
 
 /* Step 5
  *
