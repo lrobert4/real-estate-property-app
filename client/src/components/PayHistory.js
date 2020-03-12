@@ -26,7 +26,7 @@ export default class PayHistory extends Component {
     *   -REMINDER remember `setState` it is an async function
     */
     componentDidMount() {
-        axios.get('/api/PayHistory')
+        axios.get('/api/payhistory')
             .then((res) => {
                 this.setState({message: res.data})
             })
@@ -41,8 +41,10 @@ export default class PayHistory extends Component {
     render() {
         return (
             <div>
-                {/* Accessing the value of message from the state object */}
+                {/* Accessing the value of message from the state object 
                 <h1>{this.state.message}</h1>
+                */}
+                <p> Hello! I display your portfolio of properties payment history.</p>
             </div>
         )
     }

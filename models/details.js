@@ -16,6 +16,22 @@ const mongoose = require('./connection.js')
  *
  */
 const Details = new mongoose.Schema({
+    firstName: {
+      type: String,
+      required: true,
+    },
+    lastName: {
+      type: String,
+      required: true,
+    },
+    phoneNum: {
+        type: String,
+        required: true,
+    },
+    email: {
+        type: String,
+        required: true,
+    },
     address: {
         type: String,
         required: true,

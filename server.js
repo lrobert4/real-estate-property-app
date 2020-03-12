@@ -18,7 +18,6 @@ const app = express()
  */
 const { historyRouter } = require('./controllers/payHistory.js')
 const { detailsRouter } = require('./controllers/Details.js')
-const { propertyRouter } = require('./controllers/Property.js') 
 const { expenseRouter } = require('./controllers/Expenses.js')
 
 
@@ -55,7 +54,6 @@ app.use(express.static(`${__dirname}/client/build`))
 
 
 app.use('/payhistory', historyRouter)
-app.use('/api/property', propertyRouter)
 app.use('/api/details', detailsRouter)
 app.use('/api/expenses', expenseRouter)
 
