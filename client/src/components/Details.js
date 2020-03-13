@@ -44,6 +44,8 @@ export default class Details extends Component {
                 {/* Accessing the value of message from the state object 
                 <h1>{this.state.message}</h1>
                 */}
+                <h1>All Properties</h1>
+                <button onClick>Add New Property</button>
                 <p>Hello I'm Rental Property Details page! Display property vital information and maintenance catalog.</p>
             </div>
         )

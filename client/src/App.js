@@ -11,9 +11,9 @@ function App() {
       <Router>
         <Switch>
           
-          <Route exact path="/" component={PayHistory}/>
-          <Route exact path="/" component={Details}/>
-          <Route exact path="/" component={Expenses}/>
+          <Route exact path="/pay-history" component={PayHistory}/>
+          <Route exact path="/property-portfolio" component={Details}/>
+          <Route exact path="/property-expenses" component={Expenses}/>
           
         </Switch>
       </Router>
