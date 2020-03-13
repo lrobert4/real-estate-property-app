@@ -16,7 +16,11 @@ export default class Details extends Component {
     *
     */
     state = {
-        message: 'Testing Testing 123!'
+        properties: [],
+        firstName: '',
+        lastName: '',
+        phoneNum: '',
+
     }
 
     /* Step 4
