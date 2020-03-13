@@ -3,6 +3,7 @@
  */
 import React, { Component } from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 import PropertyOne from './images/property-one.png'
 
 /* Step 2
@@ -52,7 +53,7 @@ export default class Details extends Component {
                     <h1>{this.state.message}</h1>
                     */}
                     <h1>All Properties</h1>
-                    <button type="button" className="btn btn-secondary btn-lg btn-block button-ov">Add New Property</button>
+                    <Link to={"/propertyDetails/newDetails"}><button type="button" className="btn btn-secondary btn-lg btn-block button-ov">Add New Property</button></Link>
 
                     <div className=".col-6 .col-md-4">
                         <img src={PropertyOne} className="rounded float-left img-size" alt="Rental Property"></img>
