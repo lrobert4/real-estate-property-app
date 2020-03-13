@@ -3,12 +3,16 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import PayHistory from './components/PayHistory.js'
 import Expenses from './components/Expenses.js'
 import Details from './components/Details.js'
+import Nav from './components/Nav.js'
 
 
 function App() {
   return (
     <div className="App">
+      
+      
       <Router>
+      <Nav />
         <Switch>
           
           <Route exact path="/pay-history" component={PayHistory}/>
@@ -17,6 +21,7 @@ function App() {
           
         </Switch>
       </Router>
+      
     </div>
   );
 }
