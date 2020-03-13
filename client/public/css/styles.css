@@ -1,0 +1,16 @@
+.inner-container {
+    max-width: 960px !important;
+}
+
+.img-size {
+    max-width: 300px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.prop-list-text {
+    margin-left: 328px;
+}
+

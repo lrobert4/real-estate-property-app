@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import PayHistory from './components/PayHistory.js'
 import Expenses from './components/Expenses.js'
 import Details from './components/Details.js'
-import './App.css';
+
 
 function App() {
   return (
