@@ -15,7 +15,7 @@ const express = require('express')
  * controller you need.
  * 
  */
-const History = require('../models/payHistory.js')
+const History = require('../models/payhistory.js')
 
 /* Step 3 
  * 
