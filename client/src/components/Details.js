@@ -53,7 +53,7 @@ export default class Details extends Component {
                     <h1>{this.state.message}</h1>
                     */}
                     <h1>All Properties</h1>
-                    <Link to={"/propertyDetails/newDetails"}><button type="button" className="btn btn-secondary btn-lg btn-block button-ov">Add New Property</button></Link>
+                    <Link to={"/newdetails"}><button type="button" className="btn btn-secondary btn-lg btn-block button-ov">Add New Property</button></Link>
 
                     <div className=".col-6 .col-md-4">
                         <img src={PropertyOne} className="rounded float-left img-size" alt="Rental Property"></img>
@@ -63,7 +63,7 @@ export default class Details extends Component {
                         <p>Address: 247 Red Robin Lane, Atlanta, GA, 30080</p>
                         <p>Tenants: Lauren Poole, Jay Cutler</p>
                         <p>Phone Number: 678-213-0987</p>
-                        <button className="btn btn-primary btn-lg">View Property Full Details</button>
+                        <Link to={"/individualdetails"}><button className="btn btn-primary btn-lg">View Property Full Details</button></Link>
                         
                     </div>
                     

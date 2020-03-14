@@ -74,6 +74,8 @@ export default class editDetails extends Component {
                 </form>
 
                 </div>
+
+                
                 
             </div>
 
