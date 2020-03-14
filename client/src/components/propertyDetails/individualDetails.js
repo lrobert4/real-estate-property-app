@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropertyOne from '../images/property-one.png'
+import { Link } from 'react-router-dom'
 
 export default class individualDetails extends Component {
     render() {
@@ -19,7 +20,7 @@ export default class individualDetails extends Component {
                         <p>Address: 247 Red Robin Lane, Atlanta, GA, 30080</p>
                         <p>Tenants: Lauren Poole, Jay Cutler</p>
                         <p>Phone Number: 678-213-0987</p>
-                        <button className="btn btn-primary btn-lg">Edit Property Profile Details</button>
+                        <Link to={"/editDetails"}><button className="btn btn-primary btn-lg">Edit Property Profile Details</button></Link>
                         
                     </div>
                     <div className="clearfix"></div>
