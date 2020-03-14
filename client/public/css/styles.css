@@ -4,6 +4,7 @@
 
 .img-size {
     max-width: 300px;
+    margin-top: 20px;
 }
 
 h1 {
@@ -21,4 +22,18 @@ h2 {
 .col {
     padding: .375rem .75rem;
 }
+
+.footer {
+    margin-top: 50px;
+    background-color: #ccc;
+    height: 75px;
+    display: flex;
+    align-items: center;
+}
+
+.foot {
+    text-align: center;
+    margin-top: 18px;
+}
+
 

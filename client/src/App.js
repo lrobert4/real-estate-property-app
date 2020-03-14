@@ -7,6 +7,7 @@ import Nav from './components/Nav.js'
 import newDetails from './components/propertyDetails/newDetails.js'
 import individualDetails from './components/propertyDetails/individualDetails.js'
 import editDetails from './components/propertyDetails/editDetails.js'
+import Footer from './components/Footer.js'
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route exact path="/individualdetails" component={individualDetails}/>
           <Route exact path="/editdetails" component={editDetails}/>
         </Switch>
+        <Footer />
       </Router>
       
     </div>
