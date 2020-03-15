@@ -20,7 +20,7 @@ export default class individualExpense extends Component {
                         <p>Address: 247 Red Robin Lane, Atlanta, GA, 30080</p>
                         <p>Tenants: Lauren Poole, Jay Cutler</p>
                         <p>Phone Number: 678-213-0987</p>
-                        <Link to={"/newdetails"}><button className="btn btn-primary btn-lg">Edit Property Expense Report</button></Link>
+                        <Link to={"/editexpense"}><button className="btn btn-primary btn-lg">Edit Property Expense Report</button></Link>
                         
                     </div>
                     <div className="clearfix"></div>

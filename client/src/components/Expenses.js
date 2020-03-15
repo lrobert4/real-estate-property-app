@@ -47,7 +47,8 @@ export default class Expenses extends Component {
                 {/* Accessing the value of message from the state object 
                 <h1>{this.state.message}</h1>
                 */}
-                <h2>Rental Portfolio Expense List</h2>
+                <h2>Rental Portfolio Expense Database</h2>
+                <Link to={"/newexpense"}><button type="button" className="btn btn-secondary btn-lg btn-block button-ov">Create New Property Expense Report</button></Link>
                     <table className="table table-striped">
                             <thead>
                                 <tr>
