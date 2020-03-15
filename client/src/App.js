@@ -11,6 +11,8 @@ import Footer from './components/Footer.js'
 import individualExpense from './components/propertyExpenses/individualExpense.js'
 import editExpense from './components/propertyExpenses/editExpense.js'
 import newExpense from './components/propertyExpenses/newExpense.js'
+import individualPayHistory from './components/payHistory/individualPayHistory.js'
+import editPayHistory from './components/payHistory/editPayHistory.js'
 
 
 function App() {
@@ -28,6 +30,8 @@ function App() {
           <Route exact path="/individualexpense" component={individualExpense}/>
           <Route exact path="/editexpense" component={editExpense}/>
           <Route exact path="/newexpense" component={newExpense}/>
+          <Route exact path="/individualpayhistory" component={individualPayHistory}/>
+          <Route exact path="/editpayhistory" component={editPayHistory}/>
         </Switch>
         <Footer />
       </Router>

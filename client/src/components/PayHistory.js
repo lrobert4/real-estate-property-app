@@ -3,6 +3,7 @@
  */
 import React, { Component } from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 /* Step 2
  * Rename this class to reflect the component being created
@@ -44,7 +45,48 @@ export default class PayHistory extends Component {
                 {/* Accessing the value of message from the state object 
                 <h1>{this.state.message}</h1>
                 */}
-                <p> Hello! I display your portfolio of properties payment history.</p>
+                <div className="container">
+                
+                <div className="container inner-container">
+                {/* Accessing the value of message from the state object 
+                <h1>{this.state.message}</h1>
+                */}
+                <h2>Property Pay History Database</h2>
+                <Link to={"/newexpense"}><button type="button" className="btn btn-secondary btn-lg btn-block button-ov">Create New Pay History Report</button></Link>
+                    <table className="table table-striped">
+                            <thead>
+                                <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Address</th>
+                                <th scope="col">Tenant Name</th>
+                                <th scope="col">Pay History Report</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <th scope="row">1</th>
+                                <td>247 Red Robin Lane, Atlanta, GA, 30080</td>
+                                <td>Otto Johnson</td>
+                                <td><Link to={"/individualpayhistory"}><button class="btn btn-primary"> View Pay History Report</button></Link></td>
+                                </tr>
+                                <tr>
+                                <th scope="row">2</th>
+                                <td>123 Shady Shoals, Atlanta, GA, 30060</td>
+                                <td>John Gurly</td>
+                                <td><Link to={"/individualpayhistory"}><button class="btn btn-primary"> View Pay History Report</button></Link></td>
+                                </tr>
+                                <tr>
+                                <th scope="row">3</th>
+                                <td>7681 MLK Dr, Atlanta, GA, 30080</td>
+                                <td>Angelica Mendez</td>
+                                <td><Link to={"/individualpayhistory"}><button class="btn btn-primary"> View Pay History Report</button></Link></td>
+                                </tr>
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+
+
             </div>
         )
     }
