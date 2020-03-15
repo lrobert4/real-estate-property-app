@@ -14,10 +14,10 @@ export const Nav = () => (
                 <Link className="nav-link" to="/property-portfolio">Portfolio <span className="sr-only">(current)</span></Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="#">Expenses</Link>
+                <Link className="nav-link" to="/property-expenses">Expenses</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="#">Payment History</Link>
+                <Link className="nav-link" to="/pay-history">Payment History</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link disabled" to="#" tabindex="-1" aria-disabled="true">Disabled</Link>

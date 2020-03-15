@@ -8,6 +8,7 @@ import newDetails from './components/propertyDetails/newDetails.js'
 import individualDetails from './components/propertyDetails/individualDetails.js'
 import editDetails from './components/propertyDetails/editDetails.js'
 import Footer from './components/Footer.js'
+import individualExpense from './components/propertyExpenses/individualExpense.js'
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route exact path="/newdetails" component={newDetails}/>
           <Route exact path="/individualdetails" component={individualDetails}/>
           <Route exact path="/editdetails" component={editDetails}/>
+          <Route exact path="/individualexpense" component={individualExpense}/>
         </Switch>
         <Footer />
       </Router>
