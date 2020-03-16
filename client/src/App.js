@@ -13,6 +13,8 @@ import editExpense from './components/propertyExpenses/editExpense.js'
 import newExpense from './components/propertyExpenses/newExpense.js'
 import individualPayHistory from './components/payHistory/individualPayHistory.js'
 import editPayHistory from './components/payHistory/editPayHistory.js'
+import logPayHistory from './components/payHistory/logPayHistory.js'
+import newPayHistory from './components/payHistory/newPayHistory.js'
 
 
 function App() {
@@ -32,6 +34,8 @@ function App() {
           <Route exact path="/newexpense" component={newExpense}/>
           <Route exact path="/individualpayhistory" component={individualPayHistory}/>
           <Route exact path="/editpayhistory" component={editPayHistory}/>
+          <Route exact path="/logpayhistory" component={logPayHistory}/>
+          <Route exact path="/newpayhistory" component={newPayHistory}/>
         </Switch>
         <Footer />
       </Router>

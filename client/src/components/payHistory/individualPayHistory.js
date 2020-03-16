@@ -22,7 +22,7 @@ export default class individualPayHistory extends Component {
                         <p>Address: 247 Red Robin Lane, Atlanta, GA, 30080</p>
                         <p>Tenants: Lauren Poole, Jay Cutler</p>
                         <p>Phone Number: 678-213-0987</p>
-                        <Link to={"/editpayhistory"}><button className="btn btn-primary btn-lg">Edit Pay History Details</button></Link>
+                        <Link to={"/logpayhistory"}><button className="btn btn-primary btn-lg">Log New Payment</button></Link>
                         
                     </div>
 
@@ -34,7 +34,7 @@ export default class individualPayHistory extends Component {
                                 <th scope="col">#</th>
                                 <th scope="col">Date</th>
                                 <th scope="col">Amount Paid</th>
-                                
+                                <th scope="col">Edit Payment Details</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -42,19 +42,19 @@ export default class individualPayHistory extends Component {
                                 <th scope="row">1</th>
                                 <td>1-1-2020</td>
                                 <td>$1200</td>
-                                
+                                <td><Link to={"/editpayhistory"}><button className="btn btn-primary">Edit Logged Payment</button></Link></td>
                                 </tr>
                                 <tr>
                                 <th scope="row">2</th>
                                 <td>2-1-2020</td>
                                 <td>$1200</td>
-                                
+                                <td><Link to={"/editpayhistory"}><button className="btn btn-primary">Edit Logged Payment</button></Link></td>
                                 </tr>
                                 <tr>
                                 <th scope="row">3</th>
                                 <td>3-1-2020</td>
                                 <td>$1200</td>
-                                
+                                <td><Link to={"/editpayhistory"}><button className="btn btn-primary">Edit Logged Payment</button></Link></td>
                                 </tr>
                             </tbody>
                     </table>

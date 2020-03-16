@@ -52,7 +52,7 @@ export default class PayHistory extends Component {
                 <h1>{this.state.message}</h1>
                 */}
                 <h2>Property Pay History Database</h2>
-                <Link to={"/newexpense"}><button type="button" className="btn btn-secondary btn-lg btn-block button-ov">Create New Pay History Report</button></Link>
+                <Link to={"/newpayhistory"}><button type="button" className="btn btn-secondary btn-lg btn-block button-ov">Create New Pay History Report</button></Link>
                     <table className="table table-striped">
                             <thead>
                                 <tr>

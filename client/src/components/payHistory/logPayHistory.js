@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 
-export default class editPayHistory extends Component {
+export default class logPayHistory extends Component {
     render() {
         return (
             <div className="container">
                 
                 <div className="container inner-container">
-                <h2>Edit Payment Logged Item</h2>
+                <h2>Log New Payment</h2>
 
                 <form>
                     <div className="row">
@@ -18,7 +18,7 @@ export default class editPayHistory extends Component {
                         </div>
                     </div>
                    
-                    <button class="btn btn-primary" type="submit">Save Changes Now</button>
+                    <button class="btn btn-primary" type="submit">Log New Payment Now</button>
                 </form>
 
                 </div>
