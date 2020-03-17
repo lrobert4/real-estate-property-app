@@ -18,63 +18,63 @@ const mongoose = require('./connection.js')
 const Details = new mongoose.Schema({
     firstName: {
       type: String,
-      required: true,
+      //required: true,
     },
     lastName: {
       type: String,
-      required: true,
+      //required: true,
     },
     phoneNum: {
         type: String,
-        required: true,
+        //required: true,
     },
     email: {
         type: String,
-        required: true,
+        //required: true,
     },
     address: {
         type: String,
-        required: true,
+        //required: true,
     },
     city: {
       type: String,
-      required: true,
+      //required: true,
     },
     state: {
       type: String,
-      required: true,
+      //required: true,
     },
     zipCode: {
       type: String,
-      required: true,
+      //required: true,
     },
     yearBuilt: {
         type: String,
-        required: true,
+        //required: true,
     },
     currentRent: {
       type: String,
-      required: true,
+      //required: true,
     },
     rentDueDate: {
         type: String,
-        required: true,
+        //required: true,
     },
     lastKitchenUpgrade: {
       type: String,
-      required: true,
+      //required: true,
     },
     lastBathroomUpgrade: {
         type: String,
-        required: true,
+        //required: true,
     },
     lastRoofUpgrade: {
         type: String,
-        required: true,
+        //required: true,
     },
     notes: {
         type: String,
-        required: true,
+        //required: true,
     },
     
 })

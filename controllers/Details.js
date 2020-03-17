@@ -59,8 +59,8 @@ detailsRouter.get('/:detailsId', (req, res) => {
 
 // add newCreature to DB
 detailsRouter.post('/', (req, res) => {
-    Details.create(req.body).then(() => {
-        res.status(200).end()
+    Details.create(req.body).then((newDetail) => {
+        res.json(newDetail)
     });
 });
 
