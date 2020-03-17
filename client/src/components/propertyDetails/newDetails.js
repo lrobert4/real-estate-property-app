@@ -3,6 +3,7 @@ import axios from 'axios';
 export default class newDetails extends Component {
     //Setup state to target elements. keep track of changes
     state = {
+        properties:[],
         newDetails: {
             firstName: '',
             lastName: '',
@@ -30,13 +31,19 @@ export default class newDetails extends Component {
             
         })
     }
-    // Upon form submission send data to api. Some info will be pasted to Details component.
+    // Upon form submission send data to api. Some info will be past to Details component.
     handleSubmit = (event) => {
         console.log('handleSubmit!')
         event.preventDefault();
-        axios.post(`/api/details`, { ...this.state })
-            .then(() => {
+        axios.post(`/api/details`, this.state.newDetails)
+            .then((response) => {
+                const postProperty = response.data;
+                console.log(postProperty)
+                this.setState({
+                    properties: postProperty,
+                })
             })
+            
     }
     render() {
        

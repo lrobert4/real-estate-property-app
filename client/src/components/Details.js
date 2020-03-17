@@ -6,6 +6,7 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 import PropertyOne from './images/property-one.png'
 
+
 /* Step 2
  * Rename this class to reflect the component being created
  *
@@ -32,9 +33,11 @@ export default class Details extends Component {
     *   -REMINDER remember `setState` it is an async function
     */
     componentDidMount() {
-        axios.get('/api/details')
+        axios.get('http://localhost:3001/api/details')
             .then((res) => {
-                this.setState({message: res.data})
+                console.log(res.data)
+                this.setState({
+                    message: res.data})
             })
     }
 
