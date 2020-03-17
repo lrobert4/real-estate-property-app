@@ -19,10 +19,18 @@ export default class Details extends Component {
     */
     state = {
         properties: [],
-        firstName: '',
-        lastName: '',
-        phoneNum: '',
+        
 
+    }
+
+
+    getCreatures = () => {
+        axios.get('/api/details').then((response) => {
+            const foundProperties = response.data;
+            this.setState({
+                properties: foundProperties,
+            });
+        });
     }
 
     /* Step 4
@@ -33,12 +41,7 @@ export default class Details extends Component {
     *   -REMINDER remember `setState` it is an async function
     */
     componentDidMount() {
-        axios.get('http://localhost:3001/api/details')
-            .then((res) => {
-                console.log(res.data)
-                this.setState({
-                    message: res.data})
-            })
+        this.getCreatures();
     }
 
     /* Step 5
@@ -52,23 +55,35 @@ export default class Details extends Component {
             <div className="container">
                 
                 <div className="container inner-container">
-                    {/* Accessing the value of message from the state object 
-                    <h1>{this.state.message}</h1>
-                    */}
+                
+
                     <h1>All Properties</h1>
                     <Link to={"/newdetails"}><button type="button" className="btn btn-secondary btn-lg btn-block button-ov">Add New Property</button></Link>
 
-                    <div className=".col-6 .col-md-4">
-                        <img src={PropertyOne} className="rounded float-left img-size" alt="Rental Property"></img>
-                    </div>
-                    <div className="col-md-8 prop-list-text">
-                        <h2>Rental Property One</h2>
-                        <p>Address: 247 Red Robin Lane, Atlanta, GA, 30080</p>
-                        <p>Tenants: Lauren Poole, Jay Cutler</p>
-                        <p>Phone Number: 678-213-0987</p>
-                        <Link to={"/individualdetails"}><button className="btn btn-primary btn-lg">View Property Full Details</button></Link>
-                        
-                    </div>
+                    {
+                        this.state.properties.map((property, i) => {
+                            return (
+                                <div key={ i }>
+                                    <div className=".col-6 .col-md-4">
+                                        <img src={PropertyOne} className="rounded float-left img-size" alt="Rental Property"></img>
+                                    </div>
+                                    <div className="col-md-8 prop-list-text">
+                                        <h2>Rental Property One</h2>
+                                        <p>Address: {property.address}, {property.city}, {property.state}, {property.zipCode}</p>
+                                        <p>Tenants: {property.firstName} {property.lastName}</p>
+                                        <p>Phone Number: {property.phoneNum}</p>
+                                        <Link to={"/individualdetails"}><button className="btn btn-primary btn-lg">View Property Full Details</button></Link>
+                                        
+                                    </div>
+                                    <div className="clearfix"></div>
+                                </div>
+                            )
+                        })
+                    }
+
+                    
+
+                    
                     
                 </div>
                     
