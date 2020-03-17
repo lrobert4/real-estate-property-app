@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 export default class newDetails extends Component {
+    //Setup state to target elements. keep track of changes
     state = {
         firstName: '',
         lastName: '',
@@ -23,9 +24,11 @@ export default class newDetails extends Component {
    
 
     handleChange = (event) => {
-        console.log('OMG')
+        
+        console.log('handleChange')
+        //Using setState to update the target form elements.
         this.setState({
-
+        
         firstName: event.target.value,
         lastName: event.target.value,
         phoneNum: event.target.value,
@@ -44,12 +47,13 @@ export default class newDetails extends Component {
         })
     }
 
+    // Upon form submission send data to api. Some info will be pasted to Details component.
     handleSubmit = (event) => {
-        console.log('Wow!')
+        console.log('handleSubmit!')
         event.preventDefault();
-        axios.post(`/api/details`, this.state)
+        axios.post(`/api/details`, {...this.state})
             .then(() => {
-                this.state
+                
             })
             
         
