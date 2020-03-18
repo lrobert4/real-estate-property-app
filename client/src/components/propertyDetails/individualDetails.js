@@ -1,8 +1,35 @@
 import React, { Component } from 'react'
 import PropertyOne from '../images/property-one.png'
 import { Link } from 'react-router-dom'
+import axios from 'axios'
 
 export default class individualDetails extends Component {
+    state = {
+        properties: [],
+    
+    }
+
+    getCreatures = () => {
+        axios.get('/api/details').then((response) => {
+            const foundProperties = response.data;
+            this.setState({
+                properties: foundProperties,
+            });
+        });
+    }
+
+    /* Step 4
+    * Use componentDidMount to retrieve any data to display
+    *   Here you can make calls to your local express server
+    *   or to an external API
+    *   setState can be run here as well
+    *   -REMINDER remember `setState` it is an async function
+    */
+    componentDidMount() {
+        this.getCreatures();
+    }
+
+
     render() {
         return (
             <div className="container">

@@ -19,35 +19,35 @@ const Expenses = new mongoose.Schema({
   
     address: {
         type: String,
-        required: true,
+        //required: true,
     },
     city: {
       type: String,
-      required: true,
+      //required: true,
     },
     state: {
       type: String,
-      required: true,
+      //required: true,
     },
     zipCode: {
       type: String,
-      required: true,
+      //required: true,
     },
     propertyTax: {
         type: String,
-        required: true,
+        //required: true,
     },
     landscapingFee: {
       type: String,
-      required: true,
+      //required: true,
     },
     insurance: {
       type: String,
-      required: true,
+      //required: true,
     },
     mortgage: {
         type: String,
-        required: true,
+        //required: true,
     },
     
 })

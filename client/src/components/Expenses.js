@@ -15,8 +15,10 @@ export default class Expenses extends Component {
     * Create a state for the component to store view data
     *
     */
+    //Setup state to target elements. keep track of changes
     state = {
-        message: 'Testing Testing 123!'
+        expenses:[],
+        
     }
 
     /* Step 4
