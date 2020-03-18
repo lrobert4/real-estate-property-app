@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Redirect } from 'react-router-dom'
+
 export default class newDetails extends Component {
     //Setup state to target elements. keep track of changes
     state = {
         properties:[],
+        redirect: false,
         newDetails: {
             firstName: '',
             lastName: '',
@@ -42,11 +45,28 @@ export default class newDetails extends Component {
                 this.setState({
                     properties: postProperty,
                 })
+                this.setRedirect()
             })
             
     }
+
+    setRedirect = () => {
+        this.setState({
+          redirect: true
+        })
+      }
+    
+    renderRedirect = () => {
+        console.log('redirect Test!')
+        
+          return <Redirect to='/property-portfolio' />
+        
+      }
+
     render() {
-       
+        if(this.state.redirect){
+            return <Redirect to='/property-portfolio' />
+        }
         return (
             <div className="container">
                 <div className="container inner-container">
@@ -84,6 +104,7 @@ export default class newDetails extends Component {
                                 <input type="text" className="form-control" name="zipCode" placeholder="Zip Code" onChange={this.handleChange}></input>
                             </div>
                         </div>
+                        
                         <button className="btn btn-primary" type="submit">Create Profile Now</button>
                     </form>
                 </div>
