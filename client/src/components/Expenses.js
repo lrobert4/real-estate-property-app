@@ -31,23 +31,19 @@ export default class Expenses extends Component {
         });
     }
 
-    /* Step 4
-    * Use componentDidMount to retrieve any data to display
-    *   Here you can make calls to your local express server
-    *   or to an external API
-    *   setState can be run here as well
-    *   -REMINDER remember `setState` it is an async function
-    */
-   componentDidMount() {
-    this.getExpenses();
-}
+    clickDelete = (id) => {
+        
+        axios.delete('/api/expenses/' + id).then(() => {
+            this.getExpenses();
+        });
+    }
 
-    /* Step 5
-    *  The render function manages what is shown in the browser
-    *  TODO: delete the jsx returned
-    *   and replace it with your own custom jsx template
-    *
-    */
+    
+    componentDidMount() {
+        this.getExpenses();
+    }
+
+   
     render() {
         return (
             <div className="container">
@@ -78,7 +74,7 @@ export default class Expenses extends Component {
                                 <td>{expenses.mortgage}</td>
                                 <td>{expenses.landscapingFee}</td>
                                 <td>{expenses.insurance}</td>
-                                <td><Link to={"/individualexpense"}><button class="btn btn-primary"> Delete</button></Link></td>
+                                <td><button onClick={ () => this.clickDelete(expenses._id) } class="btn btn-primary"> Delete</button></td>
                                 </tr>
                                 
                                 

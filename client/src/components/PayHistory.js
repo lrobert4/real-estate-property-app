@@ -34,7 +34,7 @@ export default class PayHistory extends Component {
     }
 
     clickDelete = (id) => {
-        console.log("Testing Delete!")
+        
         axios.delete('/api/payhistory/' + id).then(() => {
             this.getHistory();
         });
@@ -47,10 +47,6 @@ export default class PayHistory extends Component {
 
 
     render() {
-
-        if (this.state.redirect) {
-            return <Redirect to="/pay-history"/>;
-        }
 
         return (
             <div>
