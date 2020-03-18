@@ -93,7 +93,7 @@ export default class newPayHistory extends Component {
                         <input type="text" className="form-control" name="amountPaid" placeholder="Amount Paid" onChange={this.handleChange}></input>
                         </div>
                         <div className="col">
-                        <input type="text" className="form-control" name="datePaid" placeholder="Date Paid" onChange={this.handleChange}></input>
+                        <input type="date" className="form-control" name="datePaid" placeholder="Date Paid" onChange={this.handleChange}></input>
                         </div>
                     </div>
                     

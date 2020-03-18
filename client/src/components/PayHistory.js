@@ -33,13 +33,10 @@ export default class PayHistory extends Component {
         });
     }
 
-    clickDelete = () => {
+    clickDelete = (id) => {
         console.log("Testing Delete!")
-        const historyId = this.props.match.params.historyId;
-        axios.delete('/api/payhistory/' + historyId).then(() => {
-            this.setState({
-                redirect: true,
-            });
+        axios.delete('/api/payhistory/' + id).then(() => {
+            this.getHistory();
         });
     }
 
@@ -87,7 +84,7 @@ export default class PayHistory extends Component {
                                 <td>{history.phoneNum}</td>
                                 <td>{history.amountPaid}</td>
                                 <td>{history.datePaid}</td>
-                                <td><button onClick={ this.clickDelete } className="btn btn-primary"> Delete</button></td>
+                                <td><button onClick={ () => this.clickDelete(history._id) } className="btn btn-primary"> Delete</button></td>
                                 </tr>
                             
                                 
