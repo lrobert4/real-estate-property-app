@@ -75,7 +75,7 @@ export default class Details extends Component {
                                         <Link to={"/individualdetails"}><button className="btn btn-primary btn-lg">View Property Full Details</button></Link>
                                         
                                     </div>
-                                    <div className="clearfix"></div>
+                                    <div className="clearfix extra-space"></div>
                                 </div>
                             )
                         })

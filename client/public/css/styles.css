@@ -28,6 +28,10 @@ h3 {
     padding: .375rem .75rem;
 }
 
+.extra-space {
+    margin-bottom: 20px;
+}
+
 .footer {
     margin-top: 50px;
     background-color: #ccc;

@@ -30,6 +30,22 @@ export default class PayHistory extends Component {
             });
         });
     }
+/*
+    clickDelete = () => {
+        const historyId = this.props.match.params.historyId;
+        axios.delete('/api/payhistory' + clickDelete = () => {
+        const historyId = this.props.match.params.creatureId;
+        axios.delete('/api/payhistory' + historyId).then(() => {
+            this.setState({
+                redirect: true,
+            });
+        });
+    }).then(() => {
+            this.setState({
+                redirect: true,
+            });
+        });
+    } */
 
 
     componentDidMount() {
@@ -75,7 +91,7 @@ export default class PayHistory extends Component {
                                 <td>{history.phoneNum}</td>
                                 <td>{history.amountPaid}</td>
                                 <td>{history.datePaid}</td>
-                                <td><Link to={"/individualpayhistory"}><button class="btn btn-primary"> Delete</button></Link></td>
+                                <td><button class="btn btn-primary" onClick={ this.clickDelete }> Delete</button></td>
                                 </tr>
                             
                                 
