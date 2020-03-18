@@ -68,11 +68,11 @@ export default class Details extends Component {
                                         <img src={PropertyOne} className="rounded float-left img-size" alt="Rental Property"></img>
                                     </div>
                                     <div className="col-md-8 prop-list-text">
-                                        <h2>Rental Property One</h2>
-                                        <p>Address: {property.address}, {property.city}, {property.state}, {property.zipCode}</p>
-                                        <p>Tenants: {property.firstName} {property.lastName}</p>
-                                        <p>Phone Number: {property.phoneNum}</p>
-                                        <Link to={"/individualdetails"}><button className="btn btn-primary btn-lg">View Property Full Details</button></Link>
+                                        <h2>Rental Property Information</h2>
+                                        <p><strong>Address:</strong> {property.address}, {property.city}, {property.state}, {property.zipCode}</p>
+                                        <p><strong>Tenants:</strong> {property.firstName} {property.lastName} | <strong>Phone Number:</strong> {property.phoneNum}</p>
+                                        <Link to={"/individualdetails"}><button className="btn btn-primary btn-lg inline-spacing">Delete</button></Link>
+                                        <Link to={"/property-expenses"}><button className="btn btn-primary btn-lg">Create Expense Report</button></Link>
                                         
                                     </div>
                                     <div className="clearfix extra-space"></div>

@@ -1,5 +1,11 @@
 .inner-container {
     max-width: 960px !important;
+    
+    
+}
+
+.inline-spacing {
+    margin-right: 25px;
 }
 
 .img-size {
@@ -29,7 +35,9 @@ h3 {
 }
 
 .extra-space {
-    margin-bottom: 20px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #555;
+    margin-top: 70px;
 }
 
 .footer {
