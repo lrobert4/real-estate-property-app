@@ -28,10 +28,6 @@ const Details = new mongoose.Schema({
         type: String,
         //required: true,
     },
-    email: {
-        type: String,
-        //required: true,
-    },
     address: {
         type: String,
         //required: true,
@@ -48,34 +44,7 @@ const Details = new mongoose.Schema({
       type: String,
       //required: true,
     },
-    yearBuilt: {
-        type: String,
-        //required: true,
-    },
-    currentRent: {
-      type: String,
-      //required: true,
-    },
-    rentDueDate: {
-        type: String,
-        //required: true,
-    },
-    lastKitchenUpgrade: {
-      type: String,
-      //required: true,
-    },
-    lastBathroomUpgrade: {
-        type: String,
-        //required: true,
-    },
-    lastRoofUpgrade: {
-        type: String,
-        //required: true,
-    },
-    notes: {
-        type: String,
-        //required: true,
-    },
+    
     
 })
 

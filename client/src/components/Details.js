@@ -60,7 +60,7 @@ export default class Details extends Component {
                                     <div className="col-md-8 prop-list-text">
                                         <h2>Rental Property Information</h2>
                                         <p><strong>Address:</strong> {property.address}, {property.city}, {property.state}, {property.zipCode}</p>
-                                        <p><strong>Tenants:</strong> {property.firstName} {property.lastName} | <strong>Phone Number:</strong> {property.phoneNum}</p>
+                                        <p><strong>Tenants:</strong> {property.firstName} {property.lastName} <strong>|</strong> <strong>Phone Number:</strong> {property.phoneNum}</p>
                                         <button onClick={ () => this.clickDelete(property._id) } className="btn btn-primary btn-lg inline-spacing">Delete</button>
                                         <Link to={"/property-expenses"}><button className="btn btn-primary btn-lg">Create Expense Report</button></Link>
                                         
