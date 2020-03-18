@@ -76,7 +76,7 @@ historyRouter.put('/:historyId', (req, res) => {
 // deletes creature with creatureId from DB
 historyRouter.delete('/:historyId', (req, res) => {
     History.findByIdAndDelete(req.params.historyId).then(() => {
-        res.status(200).end()
+        res.status(200).end();
     });
 });
 

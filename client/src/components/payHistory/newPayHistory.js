@@ -41,7 +41,7 @@ export default class newPayHistory extends Component {
                 const postHistory = response.data;
                 console.log(postHistory)
                 this.setState({
-                    expenses: postHistory,
+                    history: postHistory,
                 })
             })
             
@@ -86,6 +86,14 @@ export default class newPayHistory extends Component {
                         </div>
                         <div className="col">
                         <input type="text" className="form-control" name="zipCode" placeholder="Zip Code" onChange={this.handleChange}></input>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div className="col">
+                        <input type="text" className="form-control" name="amountPaid" placeholder="Amount Paid" onChange={this.handleChange}></input>
+                        </div>
+                        <div className="col">
+                        <input type="text" className="form-control" name="datePaid" placeholder="Date Paid" onChange={this.handleChange}></input>
                         </div>
                     </div>
                     

@@ -4,6 +4,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import { Redirect } from 'react-router-dom';
 
 /* Step 2
  * Rename this class to reflect the component being created
@@ -18,6 +19,7 @@ export default class PayHistory extends Component {
     //Setup state to target elements. keep track of changes
     state = {
         history:[],
+        redirect: false,
         
     }
 
@@ -30,35 +32,29 @@ export default class PayHistory extends Component {
             });
         });
     }
-/*
+
     clickDelete = () => {
+        console.log("Testing Delete!")
         const historyId = this.props.match.params.historyId;
-        axios.delete('/api/payhistory' + clickDelete = () => {
-        const historyId = this.props.match.params.creatureId;
-        axios.delete('/api/payhistory' + historyId).then(() => {
+        axios.delete('/api/payhistory/' + historyId).then(() => {
             this.setState({
                 redirect: true,
             });
         });
-    }).then(() => {
-            this.setState({
-                redirect: true,
-            });
-        });
-    } */
+    }
 
 
     componentDidMount() {
         this.getHistory();
     }
 
-    /* Step 5
-    *  The render function manages what is shown in the browser
-    *  TODO: delete the jsx returned
-    *   and replace it with your own custom jsx template
-    *
-    */
+
     render() {
+
+        if (this.state.redirect) {
+            return <Redirect to="/pay-history"/>;
+        }
+
         return (
             <div>
                 
@@ -91,7 +87,7 @@ export default class PayHistory extends Component {
                                 <td>{history.phoneNum}</td>
                                 <td>{history.amountPaid}</td>
                                 <td>{history.datePaid}</td>
-                                <td><button class="btn btn-primary" onClick={ this.clickDelete }> Delete</button></td>
+                                <td><button onClick={ this.clickDelete } className="btn btn-primary"> Delete</button></td>
                                 </tr>
                             
                                 

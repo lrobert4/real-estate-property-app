@@ -19,9 +19,7 @@ export const Nav = () => (
               <li className="nav-item">
                 <Link className="nav-link" to="/pay-history">Payment History</Link>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link disabled" to="#" tabindex="-1" aria-disabled="true">Disabled</Link>
-              </li>
+              
             </ul>
           </div>
       </nav>
