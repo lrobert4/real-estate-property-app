@@ -7,16 +7,10 @@ import { Link } from 'react-router-dom'
 import PropertyOne from './images/property-one.png'
 
 
-/* Step 2
- * Rename this class to reflect the component being created
- *
- */
+
 export default class Details extends Component {
 
-    /* Step 3
-    * Create a state for the component to store view data
-    *
-    */
+
     state = {
         properties: [],
         
@@ -33,23 +27,19 @@ export default class Details extends Component {
         });
     }
 
-    /* Step 4
-    * Use componentDidMount to retrieve any data to display
-    *   Here you can make calls to your local express server
-    *   or to an external API
-    *   setState can be run here as well
-    *   -REMINDER remember `setState` it is an async function
-    */
+    clickDelete = (id) => {
+        
+        axios.delete('/api/details/' + id).then(() => {
+            this.getProperties();
+        });
+    }
+
+    
     componentDidMount() {
         this.getProperties();
     }
 
-    /* Step 5
-    *  The render function manages what is shown in the browser
-    *  TODO: delete the jsx returned
-    *   and replace it with your own custom jsx template
-    *
-    */
+
     render() {
         return (
             <div className="container">
@@ -71,7 +61,7 @@ export default class Details extends Component {
                                         <h2>Rental Property Information</h2>
                                         <p><strong>Address:</strong> {property.address}, {property.city}, {property.state}, {property.zipCode}</p>
                                         <p><strong>Tenants:</strong> {property.firstName} {property.lastName} | <strong>Phone Number:</strong> {property.phoneNum}</p>
-                                        <Link to={"/individualdetails"}><button className="btn btn-primary btn-lg inline-spacing">Delete</button></Link>
+                                        <button onClick={ () => this.clickDelete(property._id) } className="btn btn-primary btn-lg inline-spacing">Delete</button>
                                         <Link to={"/property-expenses"}><button className="btn btn-primary btn-lg">Create Expense Report</button></Link>
                                         
                                     </div>
