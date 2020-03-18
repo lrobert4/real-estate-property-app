@@ -24,7 +24,7 @@ export default class Details extends Component {
     }
 
 
-    getCreatures = () => {
+    getProperties = () => {
         axios.get('/api/details').then((response) => {
             const foundProperties = response.data;
             this.setState({
@@ -41,7 +41,7 @@ export default class Details extends Component {
     *   -REMINDER remember `setState` it is an async function
     */
     componentDidMount() {
-        this.getCreatures();
+        this.getProperties();
     }
 
     /* Step 5

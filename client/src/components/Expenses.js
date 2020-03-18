@@ -21,6 +21,16 @@ export default class Expenses extends Component {
         
     }
 
+
+    getExpenses = () => {
+        axios.get('/api/expenses').then((response) => {
+            const foundExpenses = response.data;
+            this.setState({
+                expenses: foundExpenses,
+            });
+        });
+    }
+
     /* Step 4
     * Use componentDidMount to retrieve any data to display
     *   Here you can make calls to your local express server
@@ -28,12 +38,9 @@ export default class Expenses extends Component {
     *   setState can be run here as well
     *   -REMINDER remember `setState` it is an async function
     */
-    componentDidMount() {
-        axios.get('/api/expenses')
-            .then((res) => {
-                this.setState({message: res.data})
-            })
-    }
+   componentDidMount() {
+    this.getExpenses();
+}
 
     /* Step 5
     *  The render function manages what is shown in the browser
@@ -45,43 +52,47 @@ export default class Expenses extends Component {
         return (
             <div className="container">
                 
-                <div className="container inner-container">
+                
                 {/* Accessing the value of message from the state object 
                 <h1>{this.state.message}</h1>
                 */}
                 <h2>Rental Portfolio Expense Database</h2>
-                <Link to={"/newexpense"}><button type="button" className="btn btn-secondary btn-lg btn-block button-ov">Create New Property Expense Report</button></Link>
+                <Link to={"/newexpense"}><button type="button" className="btn btn-secondary btn-lg btn-block button-ov">Create New expenses Expense Report</button></Link>
+                {
+                    this.state.expenses.map((expenses, e) => {
+                        return (
+                            <div key={ e }>
+
                     <table className="table table-striped">
                             <thead>
                                 <tr>
-                                <th scope="col">#</th>
                                 <th scope="col">Address</th>
-                                <th scope="col">Tenant Name</th>
-                                <th scope="col">View Expense Report</th>
+                                <th scope="col">Property Tax</th>
+                                <th scope="col">Mortgage</th>
+                                <th scope="col">Landscaping Fee</th>
+                                <th scope="col">Insurance</th>
+                                <th scope="col">Delete</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                <th scope="row">1</th>
-                                <td>247 Red Robin Lane, Atlanta, GA, 30080</td>
-                                <td>Otto Johnson</td>
-                                <td><Link to={"/individualexpense"}><button class="btn btn-primary"> View Expense Report</button></Link></td>
+                                
+                                <td>{expenses.address}, {expenses.city}, {expenses.state}, {expenses.zipCode}</td>
+                                <td>{expenses.propertyTax}</td>
+                                <td>{expenses.mortgage}</td>
+                                <td>{expenses.landscapingFee}</td>
+                                <td>{expenses.insurance}</td>
+                                <td><Link to={"/individualexpense"}><button class="btn btn-primary"> Delete</button></Link></td>
                                 </tr>
-                                <tr>
-                                <th scope="row">2</th>
-                                <td>123 Shady Shoals, Atlanta, GA, 30060</td>
-                                <td>John Gurly</td>
-                                <td><Link to={"/individualexpense"}><button class="btn btn-primary"> View Expense Report</button></Link></td>
-                                </tr>
-                                <tr>
-                                <th scope="row">3</th>
-                                <td>7681 MLK Dr, Atlanta, GA, 30080</td>
-                                <td>Angelica Mendez</td>
-                                <td><Link to={"/individualexpense"}><button class="btn btn-primary"> View Expense Report</button></Link></td>
-                                </tr>
+                                
+                                
                             </tbody>
                     </table>
-                </div>
+                    </div>
+                        )
+                })
+                }
+                
             </div>
 
         )
