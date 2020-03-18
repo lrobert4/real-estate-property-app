@@ -15,22 +15,25 @@ export default class PayHistory extends Component {
     * Create a state for the component to store view data
     *
     */
+    //Setup state to target elements. keep track of changes
     state = {
-        message: 'Testing Testing 123!'
+        history:[],
+        
     }
 
-    /* Step 4
-    * Use componentDidMount to retrieve any data to display
-    *   Here you can make calls to your local express server
-    *   or to an external API
-    *   setState can be run here as well
-    *   -REMINDER remember `setState` it is an async function
-    */
+
+    getHistory = () => {
+        axios.get('/api/payhistory').then((response) => {
+            const foundHistory = response.data;
+            this.setState({
+                history: foundHistory,
+            });
+        });
+    }
+
+
     componentDidMount() {
-        axios.get('/api/payhistory')
-            .then((res) => {
-                this.setState({message: res.data})
-            })
+        this.getHistory();
     }
 
     /* Step 5
@@ -47,46 +50,47 @@ export default class PayHistory extends Component {
                 */}
                 <div className="container">
                 
-                <div className="container inner-container">
-                {/* Accessing the value of message from the state object 
-                <h1>{this.state.message}</h1>
-                */}
+                
                 <h2>Property Pay History Database</h2>
                 <Link to={"/newpayhistory"}><button type="button" className="btn btn-secondary btn-lg btn-block button-ov">Create New Pay History Report</button></Link>
+                    
+                {
+                    this.state.history.map((history, e) => {
+                        return (
+                            <div key={ e }>
+
                     <table className="table table-striped">
                             <thead>
                                 <tr>
-                                <th scope="col">#</th>
                                 <th scope="col">Address</th>
                                 <th scope="col">Tenant Name</th>
-                                <th scope="col">Pay History Report</th>
+                                <th scope="col">Phone Number</th>
+                                <th scope="col">Amount Paid</th>
+                                <th scope="col">Date Paid</th>
+                                <th scope="col">Delete</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                <th scope="row">1</th>
-                                <td>247 Red Robin Lane, Atlanta, GA, 30080</td>
-                                <td>Otto Johnson</td>
-                                <td><Link to={"/individualpayhistory"}><button class="btn btn-primary"> View Pay History Report</button></Link></td>
+                                <td>{history.address}, {history.city}, {history.state}, {history.zipCode}</td>
+                                <td>{history.firstName} {history.lastName}</td>
+                                <td>{history.phoneNum}</td>
+                                <td>{history.amountPaid}</td>
+                                <td>{history.datePaid}</td>
+                                <td><Link to={"/individualpayhistory"}><button class="btn btn-primary"> Delete</button></Link></td>
                                 </tr>
-                                <tr>
-                                <th scope="row">2</th>
-                                <td>123 Shady Shoals, Atlanta, GA, 30060</td>
-                                <td>John Gurly</td>
-                                <td><Link to={"/individualpayhistory"}><button class="btn btn-primary"> View Pay History Report</button></Link></td>
-                                </tr>
-                                <tr>
-                                <th scope="row">3</th>
-                                <td>7681 MLK Dr, Atlanta, GA, 30080</td>
-                                <td>Angelica Mendez</td>
-                                <td><Link to={"/individualpayhistory"}><button class="btn btn-primary"> View Pay History Report</button></Link></td>
-                                </tr>
+                            
+                                
                             </tbody>
                     </table>
                 </div>
+                
+                )
+        })
+        }
+            
+
             </div>
-
-
             </div>
         )
     }

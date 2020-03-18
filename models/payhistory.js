@@ -18,43 +18,43 @@ const mongoose = require('./connection.js')
 const History = new mongoose.Schema({
     address: {
         type: String,
-        required: true,
+        //required: true,
     },
     city: {
         type: String,
-        required: true,
+        //required: true,
     },
     state: {
         type: String,
-        required: true,
+        //required: true,
     },
     zipCode: {
         type: String,
-        required: true,
+        //required: true,
     },
     firstName: {
       type: String,
-      required: true,
+      //required: true,
     },
     lastName: {
       type: String,
-      required: true,
+      //required: true,
     },
     phoneNum: {
         type: String,
-        required: true,
+        //required: true,
     },
     email: {
         type: String,
-        required: true,
+        //required: true,
     },
     amountPaid: {
         type: String,
-        required: true,
+        //required: true,
     },
     datePaid: {
         type: String,
-        required: true,
+        //required: true,
     },
     
 })
