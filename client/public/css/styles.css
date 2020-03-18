@@ -53,4 +53,12 @@ h3 {
     margin-top: 18px;
 }
 
+@media (min-width: 1200px) {
+    .table-width {
+        max-width: 1250px !important;
+    }
+
+}
+
+
 

@@ -49,7 +49,7 @@ export default class PayHistory extends Component {
         return (
             <div>
                 
-                <div className="container">
+                <div className="container table-width">
                 
                 
                 <h2>Property Pay History Database</h2>

@@ -58,6 +58,7 @@ export default class Expenses extends Component {
                     <table className="table table-striped">
                             <thead>
                                 <tr>
+                                
                                 <th scope="col">Address</th>
                                 <th scope="col">Property Tax</th>
                                 <th scope="col">Mortgage</th>
