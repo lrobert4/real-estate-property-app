@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+
 export default class newPayHistory extends Component {
 
     //Setup state to target elements. keep track of changes
@@ -32,9 +33,10 @@ export default class newPayHistory extends Component {
             
         })
     }
+
     // Upon form submission send data to api. Some info will be past to Details component.
     handleSubmit = (event) => {
-        console.log('handleSubmit!')
+        
         event.preventDefault();
         axios.post(`/api/payhistory`, this.state.newHistory)
             .then((response) => {
@@ -43,7 +45,10 @@ export default class newPayHistory extends Component {
                 this.setState({
                     history: postHistory,
                 })
+                
             })
+
+            
             
     }
 
@@ -64,7 +69,7 @@ export default class newPayHistory extends Component {
                         <input type="text" className="form-control" name="lastName" placeholder="Last name" onChange={this.handleChange}></input>
                         </div>
                     </div>
-                    <div class="row">
+                    <div className="row">
                         <div className="col">
                         <input type="text" className="form-control" name="phoneNum" placeholder="Phone Number" onChange={this.handleChange}></input>
                         </div>
@@ -72,7 +77,7 @@ export default class newPayHistory extends Component {
                         <input type="text" className="form-control" name="email" placeholder="Email Address" onChange={this.handleChange}></input>
                         </div>
                     </div>
-                    <div class="row">
+                    <div className="row">
                         <div className="col">
                         <input type="text" className="form-control" name="address" placeholder="Address" onChange={this.handleChange}></input>
                         </div>
@@ -80,7 +85,7 @@ export default class newPayHistory extends Component {
                         <input type="text" className="form-control" name="city" placeholder="City" onChange={this.handleChange}></input>
                         </div>
                     </div>
-                    <div class="row">
+                    <div className="row">
                         <div className="col">
                         <input type="text" className="form-control" name="state" placeholder="State" onChange={this.handleChange}></input>
                         </div>
@@ -88,7 +93,7 @@ export default class newPayHistory extends Component {
                         <input type="text" className="form-control" name="zipCode" placeholder="Zip Code" onChange={this.handleChange}></input>
                         </div>
                     </div>
-                    <div class="row">
+                    <div className="row">
                         <div className="col">
                         <input type="text" className="form-control" name="amountPaid" placeholder="Amount Paid" onChange={this.handleChange}></input>
                         </div>
@@ -98,7 +103,7 @@ export default class newPayHistory extends Component {
                     </div>
                     
                     
-                    <button class="btn btn-primary" type="submit">Create New Property Payment History Now</button>
+                    <button className="btn btn-primary" type="submit">Create New Property Payment History Now</button>
                 </form>
 
                 </div>

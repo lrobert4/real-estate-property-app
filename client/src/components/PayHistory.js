@@ -4,7 +4,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
-import { Redirect } from 'react-router-dom';
 
 /* Step 2
  * Rename this class to reflect the component being created
@@ -19,7 +18,6 @@ export default class PayHistory extends Component {
     //Setup state to target elements. keep track of changes
     state = {
         history:[],
-        redirect: false,
         
     }
 
