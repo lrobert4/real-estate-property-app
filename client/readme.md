@@ -78,7 +78,15 @@ This web app is catered toward Property Managers and Real Estate Investors who o
 
 ## Wireframes:
 
-![alt text](https://github.com/lrobert4/real-estate-property-app/blob/master/client/src/components/images/property-details.png "Logo Title Text 1")
+<img src="https://github.com/lrobert4/real-estate-property-app/blob/master/client/src/components/images/property-details.png" alt="property details wireframe"><br/>
+
+<img src="https://github.com/lrobert4/real-estate-property-app/blob/master/client/src/components/images/expense.png" alt="property expense wireframe">
+
+<img src="https://github.com/lrobert4/real-estate-property-app/blob/master/client/src/components/images/payhistory.png" alt="property pay history wireframe">
+
+<img src="https://github.com/lrobert4/real-estate-property-app/blob/master/client/src/components/images/createpost.png" alt="Create Post wireframe">
+
+
 
 
 
