@@ -8,6 +8,7 @@ import newDetails from './components/propertyDetails/newDetails.js'
 import Footer from './components/Footer.js'
 import newExpense from './components/propertyExpenses/newExpense.js'
 import newPayHistory from './components/payHistory/newPayHistory.js'
+import Homepage from './components/Homepage.js'
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Router>
       <Nav />
         <Switch>
+          <Route exact path="/" component={Homepage}/>
           <Route exact path="/pay-history" component={PayHistory}/>
           <Route exact path="/property-portfolio" component={Details}/>
           <Route exact path="/property-expenses" component={Expenses}/>

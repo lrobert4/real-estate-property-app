@@ -1,7 +1,5 @@
 .inner-container {
     max-width: 960px !important;
-    
-    
 }
 
 .inline-spacing {
@@ -41,7 +39,6 @@ h3 {
 }
 
 .footer {
-    margin-top: 50px;
     background-color: #ccc;
     height: 75px;
     display: flex;
@@ -52,6 +49,32 @@ h3 {
     text-align: center;
     margin-top: 18px;
 }
+
+
+.full-screen {
+
+    background: url(home-img.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: left
+}
+
+.vertical-aligner {
+    max-width: 50%;
+}
+
+.home-styles{
+    margin-left: 20px;
+    text-align: left !important;
+    color: #1F1F1F;
+    font-size: 40px;
+}
+
 
 @media (min-width: 1200px) {
     .table-width {
