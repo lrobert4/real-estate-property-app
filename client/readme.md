@@ -77,3 +77,8 @@ This web app is catered toward Property Managers and Real Estate Investors who o
 [Click Me To View Project Board] (https://trello.com/b/Jprdw2Jr/rental-property-management-app)
 
 ## Wireframes:
+
+![alt text](https://github.com/lrobert4/real-estate-property-app/blob/master/client/src/components/images/property-details.png "Logo Title Text 1")
+
+
+
