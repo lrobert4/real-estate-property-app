@@ -66,6 +66,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
 ## Problem Statement:
 This web app is catered toward Property Managers and Real Estate Investors who own or manage multiple rental properties. This web app will enable them to store information such as: tenant information, property expenses, tenant pay history.
 
