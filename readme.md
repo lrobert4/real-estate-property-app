@@ -2,12 +2,12 @@
 This web app is catered toward Property Managers and Real Estate Investors who own or manage multiple rental properties. This web app will enable them to store information such as: tenant information, property expenses, tenant pay history.
 
 ## View Web App Here:
-https://intense-sierra-97088.herokuapp.com/
+<a href="https://intense-sierra-97088.herokuapp.com/"> Click to View Web App!</a>
 
 ## View Trello Board Here:
-https://trello.com/b/Jprdw2Jr/rental-property-management-app
+<a href="https://trello.com/b/Jprdw2Jr/rental-property-management-app">Click to View Project Board!</a>
 
-## Wireframes:
+## Wireframes & ERD:
 
 <img src="https://github.com/lrobert4/real-estate-property-app/blob/master/client/src/components/images/property-details.png" alt="property details wireframe"><br/>
 
