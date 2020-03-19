@@ -1,5 +1,5 @@
 ## Purpose & Problem Statement:
-This web app is catered toward Property Managers and Real Estate Investors who own or manage multiple rental properties. This web app will enable them to store information such as: tenant information, property expenses, tenant pay history.
+This web app is catered toward Property Managers and Real Estate Investors who own or manage multiple rental properties. This web app will enable them to store information such as: tenant information, property expenses, tenant pay history. The Real Property Solutions web app makes it convenient for a real estate professional to access any rental property information they may need on hand.
 
 ## View Web App Here:
 <a href="https://intense-sierra-97088.herokuapp.com/" target="_blank"> Click to View Web App!</a>
