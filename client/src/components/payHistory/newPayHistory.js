@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Redirect } from 'react-router-dom'
 
 
 export default class newPayHistory extends Component {
@@ -7,6 +8,7 @@ export default class newPayHistory extends Component {
     //Setup state to target elements. keep track of changes
     state = {
         history:[],
+        redirect: false,
         newHistory: {
             
             firstName: '',
@@ -45,15 +47,29 @@ export default class newPayHistory extends Component {
                 this.setState({
                     history: postHistory,
                 })
-                
+                this.setRedirect()
             })
 
-            
-            
     }
+
+    setRedirect = () => {
+        this.setState({
+          redirect: true
+        })
+      }
+    
+    renderRedirect = () => {
+        console.log('redirect Test!')
+        
+          return <Redirect to='/pay-history' />
+        
+      }
 
 
     render() {
+        if(this.state.redirect){
+            return <Redirect to='/pay-history' />
+        }
         return (
             <div className="container">
                 
