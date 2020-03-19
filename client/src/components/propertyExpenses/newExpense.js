@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
 import axios from 'axios';
+import { Redirect } from 'react-router-dom'
 
 export default class newExpense extends Component {
     
     //Setup state to target elements. keep track of changes
     state = {
         expenses:[],
+        redirect: false,
         newExpenses: {
             
             firstName: '',
@@ -45,12 +47,28 @@ export default class newExpense extends Component {
                 this.setState({
                     expenses: postExpense,
                 })
+                this.setRedirect()
             })
             
     }
 
+    setRedirect = () => {
+        this.setState({
+          redirect: true
+        })
+      }
+    
+    renderRedirect = () => {
+        
+          return <Redirect to='/property-expenses' />
+        
+      }
+
 
     render() {
+        if(this.state.redirect){
+            return <Redirect to='/property-expenses' />
+        }
         return (
             <div className="container">
                 
