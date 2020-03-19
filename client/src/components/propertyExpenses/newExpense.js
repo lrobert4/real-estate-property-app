@@ -60,49 +60,61 @@ export default class newExpense extends Component {
                 <form onSubmit={this.handleSubmit}>
                     <div className="row">
                         <div className="col">
+                        <label>First Name:</label>    
                         <input type="text" className="form-control" name="firstName" placeholder="First name" onChange={this.handleChange}></input>
                         </div>
                         <div className="col">
+                        <label>Last Name:</label>    
                         <input type="text" className="form-control" name="lastName" placeholder="Last name" onChange={this.handleChange}></input>
                         </div>
                     </div>
                     <div class="row">
                         <div className="col">
+                        <label>Phone Number:</label> 
                         <input type="text" className="form-control" name="phoneNum" placeholder="Phone Number" onChange={this.handleChange}></input>
                         </div>
                         <div className="col">
+                        <label>Email Address:</label> 
                         <input type="text" className="form-control" name="email" placeholder="Email Address" onChange={this.handleChange}></input>
                         </div>
                     </div>
                     <div class="row">
                         <div className="col">
+                        <label>Address:</label> 
                         <input type="text" className="form-control" name="address" placeholder="Address" onChange={this.handleChange}></input>
                         </div>
                         <div className="col">
+                        <label>City:</label> 
                         <input type="text" className="form-control" name="city" placeholder="City" onChange={this.handleChange}></input>
                         </div>
                     </div>
                     <div class="row">
                         <div className="col">
+                        <label>State:</label> 
                         <input type="text" className="form-control" name="state" placeholder="State" onChange={this.handleChange}></input>
                         </div>
                         <div className="col">
+                        <label>Zip Code:</label> 
                         <input type="text" className="form-control" name="zipCode" placeholder="Zip Code" onChange={this.handleChange}></input>
                         </div>
                     </div>
                     <div class="row">
                         <div className="col">
+                        <label>Property Tax:</label> 
                         <input type="text" className="form-control" name="propertyTax" placeholder="Property Tax" onChange={this.handleChange}></input>
                         </div>
                         <div className="col">
+                        <label>Landscaping Fee:</label> 
                         <input type="text" className="form-control" name="landscapingFee" placeholder="Landscaping Fee" onChange={this.handleChange}></input>
                         </div>
                     </div>
                     <div class="row">
                         <div className="col">
+                        <label>Insurance:</label> 
                         <input type="text" className="form-control" name="insurance" placeholder="Insurance" onChange={this.handleChange}></input>
                         </div>
                         <div className="col">
+                        <label>Mortgage:</label> 
                         <input type="text" className="form-control" name="mortgage" placeholder="Mortgage" onChange={this.handleChange}></input>
                         </div>
                     </div>
