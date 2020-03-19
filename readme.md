@@ -1,4 +1,4 @@
-## Problem Statement:
+## Purpose & Problem Statement:
 This web app is catered toward Property Managers and Real Estate Investors who own or manage multiple rental properties. This web app will enable them to store information such as: tenant information, property expenses, tenant pay history.
 
 ## View Web App Here:
