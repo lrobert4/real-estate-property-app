@@ -49,7 +49,7 @@ export default class Expenses extends Component {
             <div className="container">
                 
                 <h2>Rental Portfolio Expense Database</h2>
-                <Link to={"/newexpense"}><button type="button" className="btn btn-secondary btn-lg btn-block button-ov">Create New expenses Expense Report</button></Link>
+                <Link to={"/newexpense"}><button type="button" className="btn btn-secondary btn-lg btn-block button-ov">Create New Expense Report</button></Link>
                 {
                     this.state.expenses.map((expenses, e) => {
                         return (
