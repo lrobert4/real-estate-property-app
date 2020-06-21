@@ -1,20 +1,13 @@
-/* 
- * Place all functions, classes, and/or DB schemas here for a single 
- * model.
- */
 
-/* Step 1
- *
- * Import mongoose connection
- *
- */
+// Place all functions, classes, and/or DB schemas here for a single model.
+
+// Import mongoose connection
+ 
 const mongoose = require('./connection.js')
 
-/* Step 2
- *
- * TODO: create model schema 
- *
- */
+
+// model schema 
+ 
 const Expenses = new mongoose.Schema({
   
     address: {
@@ -53,10 +46,9 @@ const Expenses = new mongoose.Schema({
 })
 
 
-/* Step 3
- *
- * TODO: export the schema
- */
+
+// export the schema
+
 module.exports = mongoose.model('Expenses', Expenses);
 
 
