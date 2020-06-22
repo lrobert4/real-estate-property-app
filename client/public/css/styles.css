@@ -76,6 +76,18 @@ h3 {
     font-size: 40px;
 }
 
+@media (max-width: 768px) {
+    .prop-img {
+        display: block;
+    }
+
+    .prop-list-text {
+        margin-left: 0px;
+        margin-top: 10px;
+        clear: both;
+    }
+}
+
 
 @media (min-width: 1200px) {
     .table-width {

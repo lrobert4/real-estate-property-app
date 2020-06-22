@@ -1,10 +1,10 @@
 /* Step 1 import React, { Component } and axios
  *
  */
-import React, { Component } from 'react'
-import axios from 'axios'
-import { Link } from 'react-router-dom'
-import PropertyOne from './images/property-one.png'
+import React, { Component } from 'react';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
+import PropertyOne from './images/property-one.png';
 
 
 
@@ -53,11 +53,12 @@ export default class Details extends Component {
                     {
                         this.state.properties.map((property, i) => {
                             return (
+
                                 <div key={ i }>
-                                    <div className=".col-6 .col-md-4">
+                                    <div className="col-6 col-md-4 col-sm-12 prop-img">
                                         <img src={PropertyOne} className="rounded float-left img-size" alt="Rental Property"></img>
                                     </div>
-                                    <div className="col-md-8 prop-list-text">
+                                    <div className="col-md-8 prop-list-text col-sm-12">
                                         <h2>Rental Property Information</h2>
                                         <p><strong>Address:</strong> {property.address}, {property.city}, {property.state}, {property.zipCode}</p>
                                         <p><strong>Tenants:</strong> {property.firstName} {property.lastName} <strong>|</strong> <strong>Phone Number:</strong> {property.phoneNum}</p>
