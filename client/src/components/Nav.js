@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link, withRouter} from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 
@@ -27,7 +27,7 @@ export const Navi = () => (
       // </nav>
       
       <Navbar bg="light" expand="lg">
-      <Navbar.Brand href="#home">Real Property Solutions</Navbar.Brand>
+      <Navbar.Brand href="/">Real Property Solutions</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">

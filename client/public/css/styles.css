@@ -66,10 +66,11 @@ h3 {
 
 .vertical-aligner {
     max-width: 50%;
+    margin-left: 20px;
 }
 
 .home-styles{
-    margin-left: 20px;
+    padding-bottom: 15px;
     text-align: left !important;
     color: #1F1F1F;
     font-size: 40px;
