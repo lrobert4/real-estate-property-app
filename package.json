@@ -4,7 +4,7 @@
   "description": "# Setup",
   "main": "server.js",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bootstrap": "^4.5.0",
     "concurrently": "^4.1.2",
     "express": "^4.17.1",
